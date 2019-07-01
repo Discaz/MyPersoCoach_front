@@ -4,9 +4,7 @@ import ModalGoal from "./ModalGoal";
 
 
 
-
 const nl2br = require('react-nl2br');
-
 
 const Modal = ({id, text1, text2, icon})  =>{
 
@@ -14,10 +12,13 @@ const Modal = ({id, text1, text2, icon})  =>{
 
   const [open, setOpen] = useState(false);
 
- 
+  console.log('ici :' + open)
+
   
   const handleClick = e => {
     if (node.current.contains(e.target)) {
+      console.log('ici 2 :' + node.current.contains(e.target));
+      
       // inside click
       return;
     }
@@ -47,21 +48,24 @@ return(
  <div className="displayModalCentered">
      
      <div className="image_icon" ref={node}  onClick={e => setOpen(!open)}>
-        
+
         <div >
+          
+          
+          <img  onClick={e => handleChange(id, text1, text2, icon)} alt="icon" src={icon} />
         
-        
-        <img  onClick={e => handleChange(id, text1, text2, icon)} alt="icon" src={icon} />
-       
-        
-       
-        {open && (<ModalGoal id={id} text2={nl2br(text2)} src={icon} show={setOpen} />)}
-     
+          
+          {open && (<ModalGoal id={id} text2={nl2br(text2)} src={icon} show={setOpen} />)}
+      
         </div>
        
-      </div>      
- <div ><p >{text1}</p></div>
-</div>
+      </div> 
+
+      <div>
+          <p >{text1}</p>
+      </div>
+
+  </div>
 
 )
 }

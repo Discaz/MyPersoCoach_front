@@ -59,6 +59,10 @@ class Sympto4Orga extends React.Component {
         this.setState({text_static4: res.data[0]});
     };
 
+    getTextStatic = async () => {
+        const res = await axios.get("http://localhost:3001/text_static/4");
+        this.setState({ text_static: res.data[0] });
+      };
     componentDidMount() {
         this.getHeader();
         this.getTextStatic();

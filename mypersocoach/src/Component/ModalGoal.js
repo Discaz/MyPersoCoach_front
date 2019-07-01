@@ -18,7 +18,8 @@ handleClick = () => {
 render() {
 
     const showHideClassname = this.props.show ? "modal-display-block" : "modal-display-none";
-  
+    console.log(showHideClassname)
+    console.log('props log :' + this.props.src)
 
     return(
     
@@ -26,14 +27,18 @@ render() {
     
     <div className={showHideClassname} >
         
-    <div className="modal_Cards" >
-    <div className="Problem_modal">
-    <img className="icon_problem"  alt="icon_problem" src={this.props.src}/>
-    <p className="modalText">{this.props.text2}</p>
-<button type="button" onClick={this.handleClick}   name ="C'est parti !">C'est parti !</button>
+        <div className="modal_Cards" >
 
-    </div>
-    </div>
+                <div className="Problem_modal">
+
+                    <img className="icon_problem"  alt="icon_problem" src={this.props.src}/>
+                    <p className="modalText">{this.props.text2}</p>
+                    <button type="button" onClick={this.handleClick} name ="C'est parti !">C'est parti !</button>
+
+                </div>
+
+        </div>
+
     </div>
    
     )
