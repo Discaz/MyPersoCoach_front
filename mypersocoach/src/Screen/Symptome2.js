@@ -48,7 +48,6 @@ class Symptome2 extends React.Component {
 
   render() {
     
-    console.log('oho"ho"ho"hoh', this.state.response)
     const{icon,text_static, response}= this.state
     return (
       <div className="containerS2">

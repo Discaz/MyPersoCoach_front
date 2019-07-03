@@ -46,7 +46,7 @@ class Symptome3 extends React.Component {
         console.log("response axios: symp3", res);
         const lastId = res.data.summaryId
         this.setState({ lastId : lastId})
-        console.log('pouic pouic', this.state.lastId)
+        console.log('recup de summery', this.state.lastId)
       })
    }
 
@@ -61,8 +61,8 @@ class Symptome3 extends React.Component {
   
   render() {
     const { icon, text_static, problem, lastId } = this.state;
-    console.log("oui oui oui",this.state.lastId)
-    console.log('pouet pouet', this.state.id)
+    console.log("affiche la state de lastId",this.state.lastId)
+    console.log('affiche la state de id', this.state.id)
     
     return (
       <div className="containerSymptom3">

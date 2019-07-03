@@ -48,7 +48,16 @@ return (
     </div>
     
       <div className="display-modal" >
-      {text_prob.map(content => <Modal  id= {content.id} text1={content.all_text1} text2={content.all_text2} icon={content.picture_src}/>)}
+      {text_prob.map(content => 
+        <Modal  
+
+          id= {content.id} 
+          text1={content.all_text1} 
+          text2={content.all_text2} 
+          icon={content.picture_src}
+          
+          />
+        )}
       </div>
   </div>
    

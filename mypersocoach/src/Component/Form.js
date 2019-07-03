@@ -86,12 +86,18 @@ class Form extends React.Component {
         this.getValidate();
         this.getBack();
     }
+    componentDidUpdate(prevProps, prevState){
+        console.log('prevProsp :' ,prevProps);
+        console.log('prevState : ', prevState);
+        
+        
+    }
 
     render() {
 
         const { response, text_static2, text_static3, text_static4 } = this.state
 
-        console.log('pouet pouet', this.state.textarea, this.state.lasId)
+        console.log('state de form :', this.state.textarea, this.state.lasId)
 
         return (
             <div>

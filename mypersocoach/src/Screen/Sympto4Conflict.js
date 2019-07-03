@@ -46,9 +46,7 @@ class Sympto4Conflict extends React.Component {
         const id= this.props.location.state.lastId
         console.log('pouet pouet', id)
         axios.put(`http://localhost:3001/summary/${id}`, {problem_id: problem_id})
-          .then(res => {
-            console.log("response axios: conflict ", res);
-          })
+          
       }
 
     
@@ -65,7 +63,6 @@ class Sympto4Conflict extends React.Component {
         //C'est une liaison avec ce qu'il y a dans le "return" et ce qu'il y a au-dessus
         //Sinon, il y aura un message d'erreur "undefined"
         const{icon,text_static,problem}= this.state
-        console.log('coucou cest nous', this.props.location.state.lastId);
         
 
         return (
