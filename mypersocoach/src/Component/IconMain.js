@@ -2,11 +2,7 @@ import React from "react";
 
 import "../Component/IconMain.css";
 
-const IconMain = ({
-  icon,
-  alt,
-  
-}) => {
+const IconMain = ({icon,alt}) => {
   //"({icon})" est une props.
   //Cette props est liée à son composant appelé dans une autre page
   return (
